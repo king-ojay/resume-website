@@ -1,4 +1,4 @@
-/* Reset some basic styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -55,11 +55,11 @@ main {
     padding: 20px;
     border: 1px solid #ddd; /* Light border for separation */
     border-radius: 8px; /* Rounded corners */
-    background: #f9f9f9; /* Light gray background for main content */
+    background: #f9f9f9; 
 }
 
 h2 {
-    font-size: 2em; /* Slightly larger font for subheadings */
+    font-size: 2em; /* Slightly larger than the font for subheadings */
     margin-bottom: 10px; /* Space below the subheading */
 }
 
