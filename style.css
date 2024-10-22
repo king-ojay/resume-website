@@ -22,6 +22,10 @@ header {
 }
 
 /* Navigation Styles */
+nav {
+    position: relative;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -41,30 +45,6 @@ nav a {
 #navbar-toggle {
     display: none; /* Hidden by default */
 }
-#nav-links {
-    display: none; /* Hide links by default */
-}
-
-#navbar-toggle {
-    display: none; /* Hide toggle button initially */
-}
-
-/* Show the toggle button on smaller screens */
-@media (max-width: 768px) {
-    #navbar-toggle {
-        display: block; /* Show toggle button */
-        background: none;
-        border: none;
-        font-size: 24px; /* Larger button */
-        cursor: pointer; /* Pointer cursor */
-        color: white; /* Match the color with navbar */
-    }
-
-    #nav-links {
-        display: block; /* Stack links vertically when shown */
-    }
-}
-
 
 /* Main Content Styles */
 main {
@@ -76,7 +56,7 @@ main {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; 
+    z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -103,7 +83,7 @@ main {
 /* Responsive Styles */
 @media (max-width: 768px) {
     nav ul {
-        display: none; /* Hide links by default  */
+        display: none; /* Hide links by default on mobile */
         flex-direction: column; /* Stack vertically */
     }
 
@@ -117,6 +97,11 @@ main {
     }
 
     #nav-links {
-        display: block; /* Stack links vertically when shown */
+        display: block; 
+    }
+
+    /* Show links when toggled */
+    nav.active ul {
+        display: flex; /* Show links */
     }
 }
