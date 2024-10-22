@@ -1,0 +1,105 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+    line-height: 1.6; /* Improved readability */
+    background-color: #ffffff; /* White background */
+    color: #333; /* Darker text for contrast */
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background: #007BFF; /* Blue background for header */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em; /* Larger font size for the main title */
+}
+
+/* Navigation styling */
+nav {
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style: none; /* Remove bullets from list */
+}
+
+nav ul li {
+    display: inline; /* Inline list items for horizontal nav */
+    margin: 0 15px; /* Space between items */
+}
+
+nav a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Bold text for better visibility */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    background: #f9f9f9; /* Light gray background for main content */
+}
+
+h2 {
+    font-size: 2em; /* Slightly larger font for subheadings */
+    margin-bottom: 10px; /* Space below the subheading */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    margin-left: 20px; /* Indent for better visibility */
+}
+
+ul li {
+    margin-bottom: 15px; /* Space between list items */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em; 
+}
+
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; 
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller title on mobile */
+    }
+
+    h2 {
+        font-size: 1.5em; 
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; 
+    }
+
+    h1 {
+        font-size: 1.8em; 
+    }
+}
