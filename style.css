@@ -103,3 +103,26 @@ footer {
         font-size: 1.8em; 
     }
 }
+#nav-links {
+    display: none; /* Hide links by default */
+}
+
+#navbar-toggle {
+    display: none; /* Hide toggle button initially */
+}
+
+/* Show the toggle button on smaller screens */
+@media (max-width: 768px) {
+    #navbar-toggle {
+        display: block; /* Show toggle button */
+        background: none;
+        border: none;
+        font-size: 24px; /* Larger button */
+        cursor: pointer; /* Pointer cursor */
+        color: white; /* Match the color with navbar */
+    }
+
+    #nav-links {
+        display: block; /* Stack links vertically when shown */
+    }
+}
