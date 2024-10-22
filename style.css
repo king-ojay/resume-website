@@ -41,7 +41,6 @@ nav a {
     text-decoration: none;
 }
 
-/* Toggle Button for Mobile */
 #navbar-toggle {
     display: none; /* Hidden by default */
 }
