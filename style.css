@@ -1,107 +1,45 @@
-
+/* Basic CSS Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* Body Styles */
 body {
-    font-family: 'Arial', sans-serif; /* Use a clean, modern font */
-    line-height: 1.6; /* Improved readability */
-    background-color: #ffffff; /* White background */
-    color: #333; /* Darker text for contrast */
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white; /* White background */
+    color: #333;
 }
 
-/* Header styling */
+/* Header Styles */
 header {
-    background: #007BFF; /* Blue background for header */
+    background: #333;
     color: white;
-    padding: 10px 0;
+    padding: 1rem;
     text-align: center;
 }
 
-h1 {
-    font-size: 2.5em; /* Larger font size for the main title */
-}
-
-/* Navigation styling */
-nav {
-    margin: 20px 0;
-}
-
+/* Navigation Styles */
 nav ul {
-    list-style: none; /* Remove bullets from list */
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
 nav ul li {
-    display: inline; /* Inline list items for horizontal nav */
-    margin: 0 15px; /* Space between items */
+    margin: 0 15px;
 }
 
 nav a {
-    color: white; /* White text for links */
-    text-decoration: none; /* Remove underline from links */
-    font-weight: bold; /* Bold text for better visibility */
+    color: white;
+    text-decoration: none;
 }
 
-nav a:hover {
-    text-decoration: underline; /* Underline on hover for links */
-}
-
-/* Main content styling */
-main {
-    padding: 20px;
-    border: 1px solid #ddd; /* Light border for separation */
-    border-radius: 8px; /* Rounded corners */
-    background: #f9f9f9; 
-}
-
-h2 {
-    font-size: 2em; /* Slightly larger than the font for subheadings */
-    margin-bottom: 10px; /* Space below the subheading */
-}
-
-ul {
-    list-style-type: none; /* Remove default list styling */
-    margin-left: 20px; /* Indent for better visibility */
-}
-
-ul li {
-    margin-bottom: 15px; /* Space between list items */
-}
-
-/* Footer styling */
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.8em; 
-}
-
-
-@media (max-width: 768px) {
-    nav ul li {
-        display: block; 
-    }
-
-    h1 {
-        font-size: 2em; /* Smaller title on mobile */
-    }
-
-    h2 {
-        font-size: 1.5em; 
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px; 
-    }
-
-    h1 {
-        font-size: 1.8em; 
-    }
+/* Toggle Button for Mobile */
+#navbar-toggle {
+    display: none; /* Hidden by default */
 }
 #nav-links {
     display: none; /* Hide links by default */
@@ -120,6 +58,62 @@ footer {
         font-size: 24px; /* Larger button */
         cursor: pointer; /* Pointer cursor */
         color: white; /* Match the color with navbar */
+    }
+
+    #nav-links {
+        display: block; /* Stack links vertically when shown */
+    }
+}
+
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide links by default  */
+        flex-direction: column; /* Stack vertically */
+    }
+
+    #navbar-toggle {
+        display: block; /* Show toggle button */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
     }
 
     #nav-links {
